@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark navbarp" >
+  <a class="navbar-brand" routerLink="home">
+    <img src="https://avatars1.githubusercontent.com/u/23323781?s=200&v=4" width="30" height="30" class="d-inline-block align-top" alt="">
+    auth0
+  </a>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <div *ngIf="auth.loggedIn">
+          <a class="nav-link" routerLink="protegida" *ngIf="auth.loggedIn">Datos</a>
+        </div>
+      </li>
+    </ul>
+    <div>
+      <button (click)="auth.login()" *ngIf="!auth.loggedIn" class="btn btn-outline-success">Ingresar</button>
+      <button (click)="auth.logout()" *ngIf="auth.loggedIn" class="btn btn-outline-primary">Salir</button>
+    </div>
+
+  </div>
+</nav>
