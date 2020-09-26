@@ -7,6 +7,16 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <div *ngIf="auth.loggedIn">
+          <a class="nav-link" routerLink="heroes" *ngIf="auth.loggedIn">heroes</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div >
+          <a class="nav-link" routerLink="chats" >Chats</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div *ngIf="auth.loggedIn">
           <a class="nav-link" routerLink="protegida" *ngIf="auth.loggedIn">Datos</a>
         </div>
       </li>
