@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ProtegidaComponent } from './components/protegida/protegida.component';
-import { ChatsComponent } from './components/chats/chats.component';
+import { ChatsComponent } from './components/chats/chat/chats.component';
 import { HeroesComponent } from './components/heroes/heroes/heroes.component';
 import { HeroeComponent } from './components/heroes/heroe/heroe.component';
 

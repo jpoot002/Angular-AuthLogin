@@ -1,0 +1,41 @@
+<div class=" container main-container">
+  <div class=" chat-window">
+
+    <!--<ul>
+      <li class="text" *ngFor="let item of items | async">
+        {{item.mensaje}}
+      </li>
+    </ul>
+    -->
+    <div>
+      <h1>Firechat</h1>
+      <hr>
+
+      <div class="app-mensajes" id="app-mensajes">
+
+        <div class="text-right">
+          <span class="badge badge-primary">Fernando</span>
+          <p>
+            Este es un mensaje de chat
+          </p>
+        </div>
+
+        <div>
+          <span class="badge badge-success">Maria</span>
+          <p>
+            Saludos Fernando
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+    <input type="text" name="mensaje" class="form-control"
+    [(ngModel)]="Mensaje" (keyup.enter)="Enviarmensaje()"
+    placeholder="Enviar mensaje">
+
+  </div>
+
+</div>
+
+
