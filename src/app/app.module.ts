@@ -26,7 +26,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { ChatsService }from './services/chats/chats.service'
 import { AuthService } from './services/auth.service';
-import { HeroesService }from './services/heroes/heroes.service'
+import { HeroesService }from './services/heroes/heroes.service';
+import { LoginComponent } from './components/chats/login/login.component'
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { HeroesService }from './services/heroes/heroes.service'
     HomeComponent,
     ChatsComponent,
     HeroesComponent,
-    HeroeComponent
+    HeroeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

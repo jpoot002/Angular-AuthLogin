@@ -1,3 +1,11 @@
+<div class="col-md-12 text-right" *ngIf="Chatsservice.usuario.uid">
+
+  <button type="button" class="btn btn-outline-danger"
+          (click)="Chatsservice.logout()">
+    Salir
+  </button>
+</div>
+
 <div class=" container main-container">
   <div class=" chat-window">
 
@@ -13,19 +21,16 @@
 
       <div class="app-mensajes" id="app-mensajes">
 
-        <div class="text-right">
-          <span class="badge badge-primary">Fernando</span>
-          <p>
-            Este es un mensaje de chat
-          </p>
-        </div>
-
-        <div>
-          <span class="badge badge-success">Maria</span>
-          <p>
-            Saludos Fernando
-          </p>
-        </div>
+        <div *ngFor="let chat of Chatsservice.chats"
+        [ngClass]="{ 'text-right': Chatsservice.usuario.uid == chat.uid  }">
+     <span class="badge"
+           [ngClass]="{ 'badge-primary': Chatsservice.usuario.uid == chat.uid,
+                        'badge-success': Chatsservice.usuario.uid != chat.uid }">
+           {{ chat.nombre }}</span>
+     <p>
+       {{ chat.mensaje }}
+     </p>
+   </div>
 
       </div>
 

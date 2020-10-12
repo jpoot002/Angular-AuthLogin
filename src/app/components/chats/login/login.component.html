@@ -1,0 +1,17 @@
+<div class="row">
+
+  <app-chats  *ngIf="Chatsservice.usuario.uid"></app-chats>
+
+  <div class="col-md-12 text-center ">
+      <div *ngIf="!Chatsservice.usuario.uid">
+          <p>
+            Ingrese al chat con su cuenta favorita
+          </p>
+          <button type="button" class="btn btn-outline-primary"
+                  (click)="Ingresar('google')">Google
+          </button>
+      </div>
+  </div>
+
+</div>
+

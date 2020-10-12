@@ -6,9 +6,9 @@ import { ProtegidaComponent } from './components/protegida/protegida.component';
 import { ChatsComponent } from './components/chats/chat/chats.component';
 import { HeroesComponent } from './components/heroes/heroes/heroes.component';
 import { HeroeComponent } from './components/heroes/heroe/heroe.component';
-
+import { LoginComponent } from './components/chats/login/login.component'
 const routes: Routes = [
-  { path: 'chats',component: ChatsComponent },
+  { path: 'chats',component: LoginComponent },
   { path: 'home',component: HomeComponent },
 
   {path: 'heroes/nuevo', component: HeroeComponent, canActivate: [AuthGuard]},
